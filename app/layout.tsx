@@ -1,9 +1,27 @@
-import "./globals.css";
-import {ReactNode} from "react";
+import "./globals.scss";
+import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const avenir = localFont({
+  src: [
+    {
+      path: "../public/fonts/AvenirNextLTPro-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/AvenirNextLTPro-IT.otf",
+      weight: "",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/AvenirNextLTPro-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={avenir.className}>{children}</body>
     </html>
   );
 }
