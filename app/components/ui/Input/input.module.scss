@@ -1,0 +1,23 @@
+$gray-secondary-opaque: rgba(84, 95, 125, 0.15);
+
+.login__form_input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    padding: 1rem;
+    border: 2px solid $gray-secondary-opaque;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+
+  .login__error_message {
+    color: red;
+    font-size: 1.2rem;
+  }
+
+  input::placeholder {
+    color: rgba(84, 95, 125, 0.3);
+  }
+}

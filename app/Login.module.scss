@@ -31,14 +31,14 @@ $green-primary: #39cdcc;
     max-width: 12rem;
   }
 
-  .login__form_container {
+  .login_welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     padding: 2rem 2rem 5rem 10rem;
 
-    div {
+    .login_container {
       display: flex;
       flex-direction: column;
       gap: 4rem;
@@ -70,17 +70,6 @@ $green-primary: #39cdcc;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-
-    input {
-      padding: 1rem;
-      border: 2px solid $gray-secondary-opaque;
-      border-radius: 0.5rem;
-      outline: none;
-    }
-
-    input::placeholder {
-      color: rgba(84, 95, 125, 0.3);
-    }
 
     a {
       color: $green-primary;
