@@ -18,6 +18,7 @@ export default function Login() {
     email: null,
     password: null,
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -73,11 +74,12 @@ export default function Login() {
 
             <Input
               placeholder="Password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               error={error.password && "Password must be at least 6 characters"}
               name="password"
               handleEmail={(e) => setPassword(e.target.value)}
+              onShowPassword={() => setShowPassword(!showPassword)}
             />
             <Link href="/">FORGOT PASSWORD?</Link>
             <button type="submit" onClick={handleSubmit}>

@@ -4,6 +4,7 @@ interface InputProps {
   placeholder: string;
   type: string;
   name: string;
+  onShowPassword?: () => void;
   error: string | null;
   handleEmail: (e: any) => void;
   value: string;
@@ -16,6 +17,7 @@ const Input = ({
   error,
   handleEmail,
   value,
+  onShowPassword,
 }: InputProps) => {
   return (
     <div className={inputStyles.login__form_input}>
@@ -26,6 +28,14 @@ const Input = ({
         name={name}
         onChange={handleEmail}
       />
+      {name === "password" && (
+        <p
+          className={inputStyles.login__toggle_visibility}
+          onClick={onShowPassword}
+        >
+          {type === "password" ? "Show" : "Hide"}
+        </p>
+      )}
       {error && <p className={inputStyles.login__error_message}>{error}</p>}
     </div>
   );

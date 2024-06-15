@@ -2,12 +2,22 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
 }
 .login__form_input input {
   padding: 1rem;
   border: 2px solid rgba(84, 95, 125, 0.15);
   border-radius: 0.5rem;
   outline: none;
+}
+.login__form_input .login__toggle_visibility {
+  color: #39cdcc;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 .login__form_input .login__error_message {
   color: red;

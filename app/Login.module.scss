@@ -7,6 +7,9 @@ $green-primary: #39cdcc;
   display: flex;
   min-height: 100vh;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .login__image_container {
     width: 100%;
@@ -17,11 +20,21 @@ $green-primary: #39cdcc;
     justify-content: center;
     padding: 2rem 2rem;
     position: relative;
+
+    @media (max-width: 768px) {
+      background-color: transparent;
+    }
   }
 
   .login_illustration {
     max-width: 100%;
     height: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
+    }
   }
 
   .login__logo {
@@ -29,6 +42,11 @@ $green-primary: #39cdcc;
     top: 6rem;
     left: 4rem;
     max-width: 12rem;
+
+    @media (max-width: 768px) {
+      position: static;
+      margin: 0 auto;
+    }
   }
 
   .login_welcome {
@@ -37,6 +55,9 @@ $green-primary: #39cdcc;
     justify-content: center;
     width: 100%;
     padding: 2rem 2rem 5rem 10rem;
+    @media (max-width: 768px) {
+      padding: 2rem 2rem 5rem 2rem;
+    }
 
     .login_container {
       display: flex;
@@ -44,6 +65,11 @@ $green-primary: #39cdcc;
       gap: 4rem;
       justify-content: center;
       max-width: 375px;
+
+      @media (max-width: 768px) {
+        margin: 0 auto;
+        width: 100%;
+      }
     }
 
     hgroup {
