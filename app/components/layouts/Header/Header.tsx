@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import bell from "@/public/images/bell.svg";
@@ -5,6 +7,7 @@ import Logo from "@/public/images/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import avatar from "@/public/images/avatar.png";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import Hamburger from "@/app/components/ui/Hamburger/hamburger";
 import headerStyles from "@/app/components/layouts/Header/Header.module.scss";
 
 const Header = () => {
@@ -22,12 +25,14 @@ const Header = () => {
           </button>
         </div>
         <div className={headerStyles.header__user_info}>
+          <Hamburger />
           <Link href="/">Docs</Link>
           <Image src={bell} alt="Notification" />
+
           <span className={headerStyles.header__avatar}>
             <Image src={avatar} alt="Adedeji Avatar" />
             <p>Adedeji</p>
-            <MdOutlineArrowDropDown size="18" />
+            <MdOutlineArrowDropDown className={headerStyles.header__dropdown} />
           </span>
         </div>
       </section>

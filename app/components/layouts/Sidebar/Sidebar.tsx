@@ -7,13 +7,20 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import sidebarStyles from "@/app/components/layouts/Sidebar/Sidebar.module.scss";
 import SidebarList from "@/app/components/layouts/Sidebar/SidebarList";
 import { business, customers, settings } from "@/public/constants/constants";
+import { useEffect } from "react";
+import { useShowSidebar } from "@/app/context/SidebarContext";
 
 const Sidebar = () => {
+  const { showSidebar } = useShowSidebar();
+
+  console.log(showSidebar);
+
   const pathname = usePathname();
 
-  console.log(pathname);
   return (
-    <nav className={`${sidebarStyles.sidebar} custom-scrollbar  `}>
+    <nav
+      className={`${sidebarStyles.sidebar} custom-scrollbar ${showSidebar ? sidebarStyles.mobile_sidebar : ""} `}
+    >
       <span>
         <Image
           src="/images/briefcase.svg"

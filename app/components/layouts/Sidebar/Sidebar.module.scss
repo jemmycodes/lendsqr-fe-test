@@ -24,6 +24,14 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: var(--font-work-sans), serif;
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    max-width: 300px;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+  }
 
   span {
     gap: 0.5rem;
@@ -31,7 +39,7 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
     font-size: 1.3rem;
     align-items: center;
     color: $blue-primary;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
 
   ul {
@@ -58,4 +66,9 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
   .dashboard_active {
     padding: 1rem 0;
   }
+}
+
+.mobile_sidebar {
+  transition: transform 0.3s ease-out;
+ transform: translateX(0);
 }
