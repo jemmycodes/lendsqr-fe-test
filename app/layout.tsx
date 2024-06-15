@@ -6,17 +6,17 @@ import localFont from "next/font/local";
 const avenir = localFont({
   src: [
     {
-      path: "../public/fonts/AvenirNextLTPro-Bold.otf",
+      path: "../public/fonts/avenir-next/AvenirNext-Bold.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/fonts/AvenirNextLTPro-It.otf",
-      weight: "",
-      style: "italic",
+      path: "../public/fonts/avenir-next/AvenirNext-Medium.otf",
+      weight: "500",
+      style: "normal",
     },
     {
-      path: "../public/fonts/AvenirNextLTPro-Regular.otf",
+      path: "../public/fonts/avenir-next/AvenirNext-Regular.otf",
       weight: "400",
       style: "normal",
     },

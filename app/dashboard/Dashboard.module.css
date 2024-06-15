@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  height: 100%;
+  display: flex;
+  background-color: #fbfbfb;
+  overflow-y: scroll;
+}
+
+.dashboard__main_content {
+  width: 100%;
+  padding: 4rem;
+}
+
+/*# sourceMappingURL=Dashboard.module.css.map */

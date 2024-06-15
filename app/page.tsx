@@ -7,6 +7,7 @@ import { MouseEvent, useState } from "react";
 import loginStyles from "./Login.module.scss";
 import Input from "@/app/components/ui/Input/input";
 import Illustration from "@/public/images/sign-in-illustration.png";
+import { useRouter } from "next/navigation";
 
 interface FieldError {
   email: string | null;
@@ -14,6 +15,7 @@ interface FieldError {
 }
 
 export default function Login() {
+  const router = useRouter();
   const [error, setError] = useState<FieldError>({
     email: null,
     password: null,
@@ -22,8 +24,12 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const isEmailValid = (email: string) =>
-    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+  const isEmailValid = (email: string) => {
+    const trimmedEmail = email.trim();
+    return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+      trimmedEmail,
+    );
+  };
 
   const isPasswordValid = (password: string) => password.length >= 6;
 
@@ -42,7 +48,7 @@ export default function Login() {
     if (isEmailValid(email) && isPasswordValid(password)) {
       setError({ email: null, password: null });
       // Handle login
-      console.log("Login successful");
+      router.push("/dashboard");
     }
   };
 

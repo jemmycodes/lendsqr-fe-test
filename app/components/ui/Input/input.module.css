@@ -17,6 +17,7 @@
   right: 1rem;
   top: 1.5rem;
   cursor: pointer;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .login__form_input .login__error_message {

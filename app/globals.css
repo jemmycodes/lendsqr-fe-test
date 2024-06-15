@@ -35,8 +35,35 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   all: unset;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fbfbfb;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #213f7d;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=globals.css.map */
