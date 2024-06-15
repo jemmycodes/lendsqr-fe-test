@@ -11,7 +11,7 @@ const avenir = localFont({
       style: "normal",
     },
     {
-      path: "../public/fonts/AvenirNextLTPro-IT.otf",
+      path: "../public/fonts/AvenirNextLTPro-It.otf",
       weight: "",
       style: "italic",
     },
