@@ -125,19 +125,23 @@ const UserDetails = ({ params }: { params: { slug: string } }) => {
           <UserInformationWrapper
             className={userDetailsStyles.user__details_main_content}
             heading={index === 0 ? "Guarantors" : ""}
+            key={index + guarantor.name}
           >
             <UserInformationList field=" Name" value={guarantor.name} />
             <UserInformationList
               field=" Phone Number"
               value={guarantor.phone}
+              key={index + guarantor.name}
             />
             <UserInformationList
               field="Email Address"
               value={guarantor.email}
+              key={index + guarantor.name}
             />
             <UserInformationList
               field="Relationship"
               value={guarantor.relationship}
+              key={index + guarantor.name}
             />
           </UserInformationWrapper>
         ))}
