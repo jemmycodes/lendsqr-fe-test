@@ -2,6 +2,11 @@ $blue-primary: #213f7d;
 $white-card: rgba(33, 63, 125, 0.06);
 $accent-blue: #545f7d;
 $shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
+$solid-red: rgb(228, 3, 59);
+$solid-green: rgb(57, 205, 98);
+$solid-yellow: rgb(233, 178, 0);
+
+
 
 .users__container {
   display: flex;
@@ -104,6 +109,33 @@ $shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
         border-collapse: collapse;
       }
 
+      td p {
+        display: inline-block;
+        padding: 0.7rem 1.2rem;
+        border-radius: 100px;
+        font-size: 1.4rem;
+      }
+
+      .inactive {
+        background: #f5f5f7;
+        color: $accent-blue;
+      }
+
+      .blacklisted {
+        color: $solid-red;
+        background: #fce6eb;
+      }
+
+      .active {
+        background: #f0f9f4;
+        color: $solid-green;
+      }
+
+      .pending {
+        background: #fff8e5;
+        color: $solid-yellow;
+      }
+
       tbody {
         font-size: 1.4rem;
         font-weight: normal;
@@ -113,4 +145,6 @@ $shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
       }
     }
   }
+
+
 }

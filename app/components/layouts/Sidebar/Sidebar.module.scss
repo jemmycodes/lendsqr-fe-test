@@ -27,8 +27,9 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
   font-family: var(--font-work-sans), serif;
   @media (max-width: 850px) {
     position: fixed;
+    z-index: 2;
     top: 0;
-    width: 100vw;
+    width: 100%;
     max-width: 300px;
     padding-top: 5rem;
     transform: translateX(-100%);
@@ -66,6 +67,28 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
 
   .dashboard_active {
     padding: 1rem 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-top: 1px solid #e0e0e0;
+    color: $blue-primary;
+    padding: 3rem 2rem 0.5rem 2rem;
+
+    button {
+      font-size: 1.4rem;
+      cursor: pointer;
+      align-items: center;
+      gap: 1rem;
+      color: $blue-primary-opaque;
+      display: flex;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
 

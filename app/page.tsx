@@ -8,6 +8,7 @@ import loginStyles from "./Login.module.scss";
 import Input from "@/app/components/ui/Input/input";
 import Illustration from "@/public/images/sign-in-illustration.png";
 import { useRouter } from "next/navigation";
+import { storeUserCookies } from "@/app/functions/actions";
 
 interface FieldError {
   email: string | null;
@@ -33,7 +34,7 @@ export default function Login() {
 
   const isPasswordValid = (password: string) => password.length >= 6;
 
-  const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     !isEmailValid(email) &&
@@ -47,6 +48,7 @@ export default function Login() {
 
     if (isEmailValid(email) && isPasswordValid(password)) {
       setError({ email: null, password: null });
+      await storeUserCookies();
       // Handle login
       router.push("/dashboard");
     }

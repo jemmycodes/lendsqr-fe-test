@@ -66,4 +66,34 @@ button {
   border-radius: 4px;
 }
 
+.error_container {
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  max-width: 450px;
+  margin: 2rem auto;
+  flex-direction: column;
+  font-family: var(--font-roboto), serif;
+}
+.error_container img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.error_container h2 {
+  font-weight: 500;
+  color: #213f7d;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.error_container p {
+  font-weight: 500;
+  color: #545f7d;
+  font-size: 1.4rem;
+  margin-inline: auto;
+  margin-top: 0.2rem;
+  max-width: 375px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=globals.css.map */

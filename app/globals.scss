@@ -1,3 +1,6 @@
+$blue-primary: #213f7d;
+$accent-blue: #545f7d;
+
 *,
 *::before,
 *::after {
@@ -64,4 +67,37 @@ button {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #213f7d;
   border-radius: 4px;
+}
+
+.error_container {
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  max-width: 450px;
+  margin: 2rem auto;
+  flex-direction: column;
+  font-family: var(--font-roboto), serif;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-weight: 500;
+    color: $blue-primary;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 500;
+    color: $accent-blue;
+    font-size: 1.4rem;
+    margin-inline: auto;
+    margin-top: 0.2rem;
+    max-width: 375px;
+    text-align: center;
+  }
 }

@@ -87,6 +87,10 @@ export const settings = [
     icon: "/images/audit.svg",
     name: "Audit logs",
   },
+  {
+    icon: "/images/systems.svg",
+    name: "System Messages ",
+  },
 ];
 
 export const userCard = [
@@ -120,3 +124,5 @@ export const userDetailsTabs = [
   "Savings",
   "App and System",
 ];
+
+export const stars = [1, 2, 3];

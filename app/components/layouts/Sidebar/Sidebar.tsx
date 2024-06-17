@@ -3,17 +3,24 @@ import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import sidebarStyles from "@/app/components/layouts/Sidebar/Sidebar.module.scss";
 import SidebarList from "@/app/components/layouts/Sidebar/SidebarList";
 import { business, customers, settings } from "@/public/constants/constants";
-import { useEffect } from "react";
 import { useShowSidebar } from "@/app/context/SidebarContext";
+import { removeUserCookies } from "@/app/functions/actions";
 
 const Sidebar = () => {
-  const { showSidebar } = useShowSidebar();
+  const router = useRouter();
 
-  console.log(showSidebar);
+  const handleLogOut = async () => {
+    await removeUserCookies();
+    localStorage.removeItem("user");
+    router.push("/");
+  };
+
+  const { showSidebar } = useShowSidebar();
 
   const pathname = usePathname();
 
@@ -66,6 +73,13 @@ const Sidebar = () => {
           <SidebarList icon={icon} path="/" name={name} key={index} />
         ))}
       </ul>
+      <div>
+        <button onClick={handleLogOut}>
+          <Image src="/images/logout.svg" alt="" width={18} height={18} />
+          Logout
+        </button>
+        <p>v.1.2.0</p>
+      </div>
     </nav>
   );
 };

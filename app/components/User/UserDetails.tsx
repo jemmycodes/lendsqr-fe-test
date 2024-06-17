@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { formatDate } from "@/app/functions";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import userStyles from "@/app/dashboard/users/Users.module.scss";
 import Popover from "@/app/components/ui/popover/popover";
 
 const UserDetails = ({ user }: { user: UserDetailsProps }) => {
-  console.log(user);
   const formattedDate = formatDate(user.date_joined);
   const [showPopover, setShowPopover] = useState(false);
   return (
@@ -16,7 +16,9 @@ const UserDetails = ({ user }: { user: UserDetailsProps }) => {
       <td>{user.email}</td>
       <td>{user.phone}</td>
       <td>{formattedDate}</td>
-      <td>{user.status}</td>
+      <td>
+        <p className={userStyles[user.status.toLowerCase()]}>{user.status}</p>
+      </td>
       <td style={{ position: "relative" }}>
         <BsThreeDotsVertical
           style={{ cursor: "pointer" }}

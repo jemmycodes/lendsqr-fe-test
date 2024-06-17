@@ -26,8 +26,9 @@
 @media (max-width: 850px) {
   .sidebar {
     position: fixed;
+    z-index: 2;
     top: 0;
-    width: 100vw;
+    width: 100%;
     max-width: 300px;
     padding-top: 5rem;
     transform: translateX(-100%);
@@ -62,6 +63,25 @@
 }
 .sidebar .dashboard_active {
   padding: 1rem 0;
+}
+.sidebar div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-top: 1px solid #e0e0e0;
+  color: #213f7d;
+  padding: 3rem 2rem 0.5rem 2rem;
+}
+.sidebar div button {
+  font-size: 1.4rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(33, 63, 125, 0.6);
+  display: flex;
+}
+.sidebar div p {
+  font-size: 1.2rem;
 }
 
 .mobile_sidebar {

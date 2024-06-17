@@ -2,6 +2,7 @@ import UserCard from "@/app/components/User/UserCard";
 import { userCard } from "@/public/constants/constants";
 import userStyles from "@/app/dashboard/users/Users.module.scss";
 import UserDetails from "@/app/components/User/UserDetails";
+import Error from "@/app/components/layouts/Error/Error";
 
 const Page = async () => {
   const res = await fetch(
@@ -15,8 +16,7 @@ const Page = async () => {
 
   const data = await res.json();
 
-  const users = data.slice(0, 5);
-  console.log(users);
+  const users = data?.slice(0, 5);
 
   return (
     <div>
@@ -34,26 +34,37 @@ const Page = async () => {
             />
           ))}
         </div>
-        <div className={`${userStyles.users__table_container} hide-scrollbar`}>
-          <table>
-            <thead>
-              <tr>
-                <th>Organization</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Date Joined</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user: UserDetailsProps) => (
-                <UserDetails key={user.id} user={user} />
-              ))}
-            </tbody>
-          </table>
-        </div>
+
+        {!res.ok || !data ? (
+          <Error
+            heading="Oops, can't get our servers right now"
+            text="Check your internet connection or try again later. Contact our
+              support team if this issue persists"
+          />
+        ) : (
+          <div
+            className={`${userStyles.users__table_container} hide-scrollbar`}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>Organization</th>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Date Joined</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user: UserDetailsProps) => (
+                  <UserDetails key={user.id} user={user} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
     </div>
   );

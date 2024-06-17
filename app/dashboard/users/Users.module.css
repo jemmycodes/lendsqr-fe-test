@@ -96,6 +96,28 @@
   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
   border-collapse: collapse;
 }
+.users__container .users__table_container table td p {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 100px;
+  font-size: 1.4rem;
+}
+.users__container .users__table_container table .inactive {
+  background: #f5f5f7;
+  color: #545f7d;
+}
+.users__container .users__table_container table .blacklisted {
+  color: rgb(228, 3, 59);
+  background: #fce6eb;
+}
+.users__container .users__table_container table .active {
+  background: #f0f9f4;
+  color: rgb(57, 205, 98);
+}
+.users__container .users__table_container table .pending {
+  background: #fff8e5;
+  color: rgb(233, 178, 0);
+}
 .users__container .users__table_container table tbody {
   font-size: 1.4rem;
   font-weight: normal;
