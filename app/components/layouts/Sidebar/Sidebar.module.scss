@@ -15,6 +15,7 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
 
 .sidebar {
   gap: 3rem;
+  min-width: 150px;
   width: 280px;
   height: 100%;
   display: flex;
@@ -24,7 +25,7 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: var(--font-work-sans), serif;
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -70,5 +71,5 @@ $blue-primary-opaque: rgba(33, 63, 125, 0.6);
 
 .mobile_sidebar {
   transition: transform 0.3s ease-out;
- transform: translateX(0);
+  transform: translateX(0);
 }

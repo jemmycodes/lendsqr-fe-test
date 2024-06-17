@@ -1,0 +1,24 @@
+.popover {
+  background: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  right: 0.5rem;
+  width: 180px;
+  z-index: 3;
+  padding: 2rem;
+  position: absolute;
+  box-shadow: 3px 5px 20px #0000000a;
+  letter-spacing: 0.04rem;
+
+  span,
+  button {
+    color: #545f7d;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}

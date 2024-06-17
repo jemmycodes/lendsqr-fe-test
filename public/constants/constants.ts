@@ -88,3 +88,35 @@ export const settings = [
     name: "Audit logs",
   },
 ];
+
+export const userCard = [
+  {
+    text: "Users",
+    count: "2,453",
+    icon: "/images/userss.svg",
+  },
+  {
+    text: "Active Users",
+    count: "2,453",
+    icon: "/images/active-users.svg",
+  },
+  {
+    text: "Users With Loans",
+    count: "12,453",
+    icon: "/images/users-loans.svg",
+  },
+  {
+    text: "Users with Savings",
+    count: "102,453",
+    icon: "/images/users-savings.svg",
+  },
+];
+
+export const userDetailsTabs = [
+  "General Details",
+  "Documents",
+  "Bank Details",
+  "Loans",
+  "Savings",
+  "App and System",
+];

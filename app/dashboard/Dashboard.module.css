@@ -8,12 +8,13 @@
   height: 100%;
   display: flex;
   background-color: #fbfbfb;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .dashboard__main_content {
   width: 100%;
-  padding: 4rem;
+  overflow-y: scroll;
+  padding: 3rem;
 }
 
 /*# sourceMappingURL=Dashboard.module.css.map */

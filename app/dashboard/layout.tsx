@@ -7,6 +7,7 @@ import { ShowSidebarProvider } from "@/app/context/SidebarContext";
 const dmSans = Work_Sans({
   display: "swap",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-work-sans",
 });
 

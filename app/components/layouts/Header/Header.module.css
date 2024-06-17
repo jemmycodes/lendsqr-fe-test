@@ -15,7 +15,7 @@
 .header .header__logo_container {
   width: 230px;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header .header__logo_container {
     display: none;
   }
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header section {
     flex-direction: column-reverse;
     align-items: stretch;
@@ -51,7 +51,7 @@
   outline: none;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header section .header_search input {
     width: 100%;
     max-width: 400px;
@@ -77,7 +77,7 @@
   color: #213f7d;
   font-family: var(--font-roboto), serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header section .header__user_info {
     gap: 0.3rem;
     justify-content: space-between;
@@ -87,7 +87,7 @@
   text-decoration: underline;
   font-family: var(--font-roboto), serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header section .header__user_info a {
     margin-left: auto;
     padding-right: 0.5rem;

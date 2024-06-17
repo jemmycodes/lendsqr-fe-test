@@ -12,6 +12,7 @@
 
 .sidebar {
   gap: 3rem;
+  min-width: 150px;
   width: 280px;
   height: 100%;
   display: flex;
@@ -22,7 +23,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: var(--font-work-sans), serif;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .sidebar {
     position: fixed;
     top: 0;

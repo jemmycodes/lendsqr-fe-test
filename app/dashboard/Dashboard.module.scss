@@ -10,10 +10,11 @@ $base-color: #fbfbfb;
   height: 100%;
   display: flex;
   background-color: $base-color;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .dashboard__main_content {
   width: 100%;
-  padding: 4rem;
+  overflow-y: scroll;
+  padding: 3rem;
 }

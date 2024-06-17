@@ -17,7 +17,7 @@ $blue-primary: #213f7d;
 
   .header__logo_container {
     width: 230px;
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       display: none;
     }
 
@@ -32,7 +32,7 @@ $blue-primary: #213f7d;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
       flex-direction: column-reverse;
       align-items: stretch;
     }
@@ -51,7 +51,7 @@ $blue-primary: #213f7d;
         outline: none;
         width: 100%;
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
           width: 100%;
           max-width: 400px;
         }
@@ -79,7 +79,7 @@ $blue-primary: #213f7d;
       align-items: center;
       color: $blue-primary;
       font-family: var(--font-roboto), serif;
-      @media (max-width: 768px) {
+      @media (max-width: 850px) {
         gap: 0.3rem;
         justify-content: space-between;
       }
@@ -87,7 +87,7 @@ $blue-primary: #213f7d;
         text-decoration: underline;
         font-family: var(--font-roboto), serif;
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
           margin-left: auto;
           padding-right: 0.5rem;
         }

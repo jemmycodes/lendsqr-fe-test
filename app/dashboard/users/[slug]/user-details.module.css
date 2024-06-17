@@ -1,0 +1,179 @@
+.user_details {
+  display: flex;
+  flex-direction: column;
+  color: #545f7d;
+  height: 100%;
+  overflow-y: scroll;
+  gap: 3rem;
+  font-family: var(--font-work-sans), serif;
+}
+.user_details a {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.user_details .user_details__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .user_details .user_details__header {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+.user_details .user_details__header span {
+  display: flex;
+  gap: 1rem;
+}
+.user_details .user_details__header button {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  letter-spacing: 0.1rem;
+}
+.user_details .user_details__header button:first-child {
+  border: 1px solid #e4033b;
+  color: #e4033b;
+}
+.user_details .user_details__header button:nth-child(2) {
+  border: 1px solid #39cdcc;
+  color: #39cdcc;
+}
+.user_details .user_details__header h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.user_details .user_details__banner {
+  display: flex;
+  gap: 4rem;
+  background: #fff;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 2rem 2rem 0 2rem;
+  box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+.user_details .user_details__banner .user_details__banner_top {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .user_details .user_details__banner .user_details__banner_top {
+    flex-wrap: wrap;
+  }
+}
+.user_details .user_details__banner .user_details__banner_top figure {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dbe0ea;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+.user_details .user_details__banner .user_details__banner_top span {
+  border-right: 1px solid rgba(84, 95, 125, 0.2);
+  padding-right: 3rem;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .user_details .user_details__banner .user_details__banner_top span {
+    border-right: none;
+  }
+}
+.user_details .user_details__banner .user_details__banner_top span:nth-child(2) h3 {
+  font-size: 1.4rem;
+}
+.user_details .user_details__banner .user_details__banner_top span:nth-child(4) {
+  border-right: none;
+}
+.user_details .user_details__banner .user_details__banner_top span:nth-child(4) h3 {
+  font-size: 1.4rem;
+  color: #213f7d;
+}
+.user_details .user_details__banner .user_details__banner_top .large_text {
+  color: #213f7d;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.user_details .user_details__banner .user_details__banner_top .small_heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #213f7d;
+}
+.user_details .user_details__banner .user_details__banner_bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .user_details .user_details__banner .user_details__banner_bottom {
+    overflow-x: scroll;
+  }
+}
+.user_details .user_details__banner .user_details__banner_bottom p {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.user_details .user__details_main_content {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 2rem 2rem 0 2rem;
+  box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+.user_details .user__details_main_content div.user__info {
+  display: flex;
+  gap: 2rem;
+  padding-block: 3rem;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(84, 95, 125, 0.2);
+}
+.user_details .user__details_main_content section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.user_details .user__details_main_content section h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #213f7d;
+}
+.user_details .user__details_main_content section div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 150px;
+}
+.user_details .user__details_main_content section div h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #545f7d;
+  text-transform: uppercase;
+}
+.user_details .user__details_main_content section div p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #213f7d;
+}
+
+/*# sourceMappingURL=user-details.module.css.map */

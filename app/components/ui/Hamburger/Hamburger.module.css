@@ -8,7 +8,7 @@
 .hamburger_bars {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .hamburger_bars {
     display: flex;
     width: 3rem;
