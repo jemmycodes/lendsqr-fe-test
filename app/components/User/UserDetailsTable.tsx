@@ -21,46 +21,48 @@ const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
 
   console.log(filteredUsers);
   return (
-    <div className={`${userStyles.users__table_container} hide-scrollbar`}>
-      {showFilter && (
-        <Suspense>
-          <Filter handleShowFilter={handleShowFilter} companies={companies} />
-        </Suspense>
-      )}
-      <table>
-        <thead>
-          <tr>
-            {[
-              "Organization",
-              "Username",
-              "Email",
-              "Phone Number",
-              "Date Joined",
-              "Status",
-            ].map((heading, index) => (
-              <th key={index}>
-                {heading}
-                <IoFilter
-                  style={{
-                    cursor: "pointer",
-                    marginLeft: "5px",
-                  }}
-                  size={16}
-                  onClick={handleShowFilter}
-                />
-              </th>
-            ))}
+    <Suspense>
+      <div className={`${userStyles.users__table_container} hide-scrollbar`}>
+        {showFilter && (
+          <Suspense>
+            <Filter handleShowFilter={handleShowFilter} companies={companies} />
+          </Suspense>
+        )}
+        <table>
+          <thead>
+            <tr>
+              {[
+                "Organization",
+                "Username",
+                "Email",
+                "Phone Number",
+                "Date Joined",
+                "Status",
+              ].map((heading, index) => (
+                <th key={index}>
+                  {heading}
+                  <IoFilter
+                    style={{
+                      cursor: "pointer",
+                      marginLeft: "5px",
+                    }}
+                    size={16}
+                    onClick={handleShowFilter}
+                  />
+                </th>
+              ))}
 
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredUsers.map((user: UserDetailsProps) => (
-            <UserDetails key={user.id} user={user} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredUsers.map((user: UserDetailsProps) => (
+              <UserDetails key={user.id} user={user} />
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Suspense>
   );
 };
 
