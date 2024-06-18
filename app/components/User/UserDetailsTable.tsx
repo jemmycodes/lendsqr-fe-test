@@ -5,6 +5,7 @@ import userStyles from "@/app/dashboard/users/Users.module.scss";
 import Filter from "@/app/components/ui/filter/filter";
 import { IoFilter } from "react-icons/io5";
 import useFilter from "@/app/hooks/useFilter";
+import { Suspense } from "react";
 
 const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
   const { filteredUsers, handleShowFilter, showFilter, companies } =
@@ -22,7 +23,9 @@ const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
   return (
     <div className={`${userStyles.users__table_container} hide-scrollbar`}>
       {showFilter && (
-        <Filter handleShowFilter={handleShowFilter} companies={companies} />
+        <Suspense>
+          <Filter handleShowFilter={handleShowFilter} companies={companies} />
+        </Suspense>
       )}
       <table>
         <thead>
