@@ -1,8 +1,8 @@
 import UserCard from "@/app/components/User/UserCard";
 import { userCard } from "@/public/constants/constants";
-import userStyles from "@/app/dashboard/users/Users.module.scss";
-import UserDetails from "@/app/components/User/UserDetails";
 import Error from "@/app/components/layouts/Error/Error";
+import userStyles from "@/app/dashboard/users/Users.module.scss";
+import UserDetailsTable from "@/app/components/User/UserDetailsTable";
 
 const Page = async () => {
   const res = await fetch(
@@ -42,28 +42,7 @@ const Page = async () => {
               support team if this issue persists"
           />
         ) : (
-          <div
-            className={`${userStyles.users__table_container} hide-scrollbar`}
-          >
-            <table>
-              <thead>
-                <tr>
-                  <th>Organization</th>
-                  <th>Username</th>
-                  <th>Email</th>
-                  <th>Phone Number</th>
-                  <th>Date Joined</th>
-                  <th>Status</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user: UserDetailsProps) => (
-                  <UserDetails key={user.id} user={user} />
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <UserDetailsTable users={users} />
         )}
       </section>
     </div>

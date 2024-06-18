@@ -50,7 +50,7 @@ export default function Login() {
       setError({ email: null, password: null });
       await storeUserCookies();
       // Handle login
-      router.push("/dashboard");
+      router.push("/dashboard/users");
     }
   };
 

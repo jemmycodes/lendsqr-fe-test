@@ -125,4 +125,25 @@ export const userDetailsTabs = [
   "App and System",
 ];
 
-export const stars = [1, 2, 3];
+export const filterInputData = [
+  {
+    label: "Username",
+    name: "username",
+    type: "text",
+  },
+  {
+    label: "Email",
+    name: "email",
+    type: "email",
+  },
+  {
+    label: "Date",
+    name: "date_joined",
+    type: "date",
+  },
+  {
+    label: "Phone Number",
+    name: "phone",
+    type: "tel",
+  },
+];

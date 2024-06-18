@@ -1,0 +1,77 @@
+.filter {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  position: absolute;
+  padding: 3rem 2rem;
+  border: 1px solid #d3d9e5;
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  max-width: 270px;
+  border-radius: 4px;
+  left: 2rem;
+  top: 6rem;
+  font-family: var(--font-work-sans), serif;
+  overflow-y: scroll;
+}
+@media (max-width: 1020px) {
+  .filter {
+    top: 9rem;
+  }
+}
+.filter form {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-direction: column;
+}
+.filter form div.input_container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.filter form div.input_container label {
+  font-size: 1.4rem;
+  color: #545f7d;
+  font-weight: 500;
+}
+.filter form div.input_container input,
+.filter form div.input_container select {
+  padding: 1rem;
+  border: 1px solid #d3d9e5;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: #545f7d;
+  width: 100%;
+}
+.filter form div.input_container input::placeholder {
+  color: rgba(84, 95, 125, 0.7);
+  font-family: var(--font-work-sans), serif;
+}
+.filter form .filter__cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.filter form button {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.filter form button:first-of-type {
+  color: #545f7d;
+  border: 1px solid #545f7d;
+}
+.filter form button:not(:first-of-type) {
+  background-color: #39cdcc;
+  color: #fff;
+}
+
+/*# sourceMappingURL=filter.module.css.map */

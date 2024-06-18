@@ -6,8 +6,6 @@ $solid-red: rgb(228, 3, 59);
 $solid-green: rgb(57, 205, 98);
 $solid-yellow: rgb(233, 178, 0);
 
-
-
 .users__container {
   display: flex;
   flex-direction: column;
@@ -74,6 +72,7 @@ $solid-yellow: rgb(233, 178, 0);
     border-radius: 4px;
     box-shadow: $shadow;
     overflow-x: scroll;
+    position: relative;
 
     table {
       width: 100%;
@@ -99,6 +98,8 @@ $solid-yellow: rgb(233, 178, 0);
           padding-bottom: 1rem;
           text-align: left;
           border-collapse: collapse;
+
+          horiz-align: center;
         }
       }
 
@@ -145,6 +146,4 @@ $solid-yellow: rgb(233, 178, 0);
       }
     }
   }
-
-
 }
