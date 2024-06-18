@@ -8,6 +8,11 @@
   font-family: var(--font-work-sans), serif;
   flex-wrap: wrap;
 }
+.pagination__container .active__page {
+  background: rgba(33, 63, 125, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
 .pagination__container .pagination__cta {
   display: flex;
   gap: 2rem;

@@ -73,6 +73,7 @@ $solid-yellow: rgb(233, 178, 0);
     box-shadow: $shadow;
     overflow-x: scroll;
     position: relative;
+    min-height: 400px;
 
     table {
       width: 100%;

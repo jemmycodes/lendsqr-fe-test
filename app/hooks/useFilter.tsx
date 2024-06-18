@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { formatDate } from "@/app/functions";
 
 const useFilter = (users: UserDetailsProps[]) => {
   const [showFilter, setShowFilter] = useState(false);
@@ -18,15 +19,20 @@ const useFilter = (users: UserDetailsProps[]) => {
   const username = searchParams.get("username")?.toLowerCase();
   const company = searchParams.get("company")?.toLowerCase();
   const status = searchParams.get("status")?.toLowerCase();
+  const date_joined = searchParams.get("date_joined")?.toLowerCase();
 
-  if (email || phone || username || status || company) {
-    filteredUsers = users.filter((user: any) => {
+  const formattedDate = date_joined && formatDate(date_joined);
+  const date = formattedDate?.split(",")[0];
+
+  if (email || phone || username || status || company || date_joined) {
+    filteredUsers = users.filter((user: UserDetailsProps) => {
       return (
         (phone && user.phone.toLowerCase().includes(phone)) ||
         (email && user.email.toLowerCase().includes(email)) ||
         (username && user.username.toLowerCase().includes(username)) ||
         (status && user.status.toLowerCase() === status) ||
-        (company && user.company.toLowerCase() === company)
+        (company && user.company.toLowerCase() === company) ||
+        (date_joined && formatDate(user.date_joined).includes(date!))
       );
     });
   } else {

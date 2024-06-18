@@ -13,7 +13,7 @@ import usePagination from "@/app/hooks/usePagination";
 const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
   const { filteredUsers, handleShowFilter, showFilter, companies } =
     useFilter(users);
-  const { handleOnPrevious, handleOnNext, end, start } = usePagination(
+  const { handleOnPrevious, handleOnNext, end, start, page } = usePagination(
     filteredUsers.length,
   );
 
@@ -70,6 +70,7 @@ const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
         currentDetail={
           end > filteredUsers.length ? filteredUsers.length : end + 1
         }
+        page={page}
         onHandleNext={handleOnNext}
         onHandlePrevious={handleOnPrevious}
       />

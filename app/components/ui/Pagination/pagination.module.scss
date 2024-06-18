@@ -11,6 +11,12 @@ $primary-color: rgba(84, 95, 125);
   font-family: var(--font-work-sans), serif;
   flex-wrap: wrap;
 
+  .active__page {
+    background: $opaque-bg;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+
   .pagination__cta {
     display: flex;
     gap: 2rem;

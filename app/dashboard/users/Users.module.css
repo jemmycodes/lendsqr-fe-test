@@ -63,6 +63,7 @@
   box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.04);
   overflow-x: scroll;
   position: relative;
+  min-height: 400px;
 }
 .users__container .users__table_container table {
   width: 100%;
