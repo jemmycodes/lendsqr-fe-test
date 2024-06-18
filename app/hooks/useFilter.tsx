@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const useFilter = (users: UserDetailsProps[]) => {
-  const [showFilter, setShowFilter] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
   const searchParams = useSearchParams();
 
   const handleShowFilter = () => {

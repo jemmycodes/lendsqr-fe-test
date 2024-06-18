@@ -1,15 +1,21 @@
 "use client";
 
-import UserDetails from "@/app/components/User/UserDetails";
-import userStyles from "@/app/dashboard/users/Users.module.scss";
-import Filter from "@/app/components/ui/filter/filter";
+import { Suspense } from "react";
 import { IoFilter } from "react-icons/io5";
 import useFilter from "@/app/hooks/useFilter";
-import { Suspense } from "react";
+import Filter from "@/app/components/ui/filter/filter";
+import UserDetails from "@/app/components/User/UserDetails";
+import { useRouter, useSearchParams } from "next/navigation";
+import userStyles from "@/app/dashboard/users/Users.module.scss";
+import Pagination from "@/app/components/ui/Pagination/pagination";
+import usePagination from "@/app/hooks/usePagination";
 
 const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
   const { filteredUsers, handleShowFilter, showFilter, companies } =
     useFilter(users);
+  const { handleOnPrevious, handleOnNext, end, start } = usePagination(
+    filteredUsers.length,
+  );
 
   if (!filteredUsers.length) {
     return (
@@ -19,14 +25,11 @@ const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
     );
   }
 
-  console.log(filteredUsers);
   return (
     <Suspense>
       <div className={`${userStyles.users__table_container} hide-scrollbar`}>
         {showFilter && (
-          <Suspense>
-            <Filter handleShowFilter={handleShowFilter} companies={companies} />
-          </Suspense>
+          <Filter handleShowFilter={handleShowFilter} companies={companies} />
         )}
         <table>
           <thead>
@@ -56,12 +59,20 @@ const UserDetailsTable = ({ users }: { users: UserDetailsProps[] }) => {
             </tr>
           </thead>
           <tbody>
-            {filteredUsers.map((user: UserDetailsProps) => (
+            {filteredUsers.slice(start, end).map((user: UserDetailsProps) => (
               <UserDetails key={user.id} user={user} />
             ))}
           </tbody>
         </table>
       </div>
+      <Pagination
+        dataSize={filteredUsers.length}
+        currentDetail={
+          end > filteredUsers.length ? filteredUsers.length : end + 1
+        }
+        onHandleNext={handleOnNext}
+        onHandlePrevious={handleOnPrevious}
+      />
     </Suspense>
   );
 };

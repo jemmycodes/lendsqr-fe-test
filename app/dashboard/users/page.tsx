@@ -15,9 +15,7 @@ const Page = async () => {
     },
   );
 
-  const data = await res.json();
-
-  const users = data?.slice(0, 5);
+  const users = await res.json();
 
   return (
     <div>
@@ -36,7 +34,7 @@ const Page = async () => {
           ))}
         </div>
 
-        {!res.ok || !data ? (
+        {!res.ok || !users ? (
           <Error
             heading="Oops, can't get our servers right now"
             text="Check your internet connection or try again later. Contact our

@@ -134,7 +134,7 @@ export const filterInputData = [
   {
     label: "Email",
     name: "email",
-    type: "email",
+    type: "text",
   },
   {
     label: "Date",
