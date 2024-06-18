@@ -3,6 +3,7 @@ import { userCard } from "@/public/constants/constants";
 import Error from "@/app/components/layouts/Error/Error";
 import userStyles from "@/app/dashboard/users/Users.module.scss";
 import UserDetailsTable from "@/app/components/User/UserDetailsTable";
+import { Suspense } from "react";
 
 const Page = async () => {
   const res = await fetch(
@@ -42,7 +43,9 @@ const Page = async () => {
               support team if this issue persists"
           />
         ) : (
-          <UserDetailsTable users={users} />
+          <Suspense>
+            <UserDetailsTable users={users} />
+          </Suspense>
         )}
       </section>
     </div>
